@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WeatherGlobe: Your Interactive Weather Experience</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-        <script src="https://unpkg.com/globe.gl"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobeWeather: Interactive Weather Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
 <body>
     <div id="background"></div>
     <header>
-        <h1>WeatherGlobe</h1>
+        <h1>GlobeWeather</h1>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search location...">
+            <button id="search-button"><i class="fas fa-search"></i></button>
+        </div>
     </header>
     <main>
         <div id="globe-container">
             <div id="globe"></div>
-            <div id="globe-info">Click on the globe to check weather</div>
+            <div id="globe-info">Click on the globe or search for a location</div>
         </div>
         <div id="weather-info">
             <h2>Current Weather</h2>
@@ -25,6 +31,7 @@
             <p id="temperature"></p>
             <p id="description"></p>
             <div id="weather-icon"></div>
+            <button id="remove-marker" style="display: none;">Remove Marker</button>
         </div>
     </main>
     <script src="script.js"></script>
