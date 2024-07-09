@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     async function getWeather(lat, lon) {
-        const apiKey = 'S8TjFek3N2Hl2sxk7jdsarUZQMj2NLyx';
+        const apiKey = 'Your_api_here';
         const url = `https://api.tomorrow.io/v4/timelines?location=${lat},${lon}&fields=temperature,weatherCode&timesteps=current&units=metric&apikey=${apiKey}`;
         
         try {
